@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Responsive Image</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div {
+            display: flex;
+            border: 1px solid red;
+            /* background-image: url("./andi-drude-robert-drude-assassins-creed-santacoce-sunny.jpg"); */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img srcset="assassins-creed-mobile.jpg 480w,
+            assassins-creed-default.jpg 800w"
+            sizes="(max-width: 1366px) 480px, 800px"
+            src="assassins-creed-default.jpg"
+            alt="Assassin's Creed background">
+    </div>
+</body>
+
+</html>

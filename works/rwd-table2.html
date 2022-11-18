@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 500px;
+            margin: auto;
+        }
+        td, th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 25px;
+        }
+        .no-border {
+            padding: 0;
+        }
+        .no-border table{
+            width: 100%;
+        }
+        .no-border table td:first-child{
+            border: none;
+        }
+        .no-border table td:last-child{
+            border-top: none;
+            border-right: none;
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <h1>table</h1>
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="3"></td>
+        </tr>
+        <tr>
+            <td colspan="3" class="no-border">
+                <table>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" style="padding: 50px inherit;"></td>
+        </tr>
+    </table>
+</body>
+</html>
