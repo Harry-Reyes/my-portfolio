@@ -2,6 +2,14 @@
     --darker-color: #1f3549;
     --lighter-color: #d1dee7;
     --button-color: #2b4964;
+    --anchor-color: dodgerblue;
+    --title-bg: #a6c0d3;
+}
+@keyframes nav-fade {
+    from {color: var(--lighter-color);
+    background-color: var(--button-color);}
+    to {color: var(--darker-color);
+    background-color: var(--lighter-color);}
 }
 * {
     margin: 0;
@@ -17,11 +25,13 @@ header {
     height: auto;
     background-color: var(--darker-color);
     align-items: center;
+    justify-content: center;
     column-gap: 10px;
 }
 header img{
     height: 70px;
     margin: 10px 0 6px 10px;
+    border-radius: 15%;
 }
 /* header > a {
     float: left;
@@ -33,12 +43,14 @@ header a {
     font-size: 1.1em;
 }
 header nav a:hover {
-    color: var(--darker-color);
-    background-color: var(--lighter-color);
+    /* color: var(--darker-color);
+    background-color: var(--lighter-color); */
+    animation: nav-fade forwards 150ms linear;
 }
 header ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 header li {
     float: left;
@@ -52,6 +64,11 @@ header li a {
     padding: 0 7px;
     background-color: var(--button-color);
 }
+header li a.selected {
+    background-color: var(--lighter-color);
+    color: var(--darker-color);
+    animation: none;
+}
 footer{
     display: flex;
     background-color: var(--darker-color);
@@ -61,12 +78,14 @@ footer{
     align-items: flex-end;
 }
 iframe {
-    width: 50;
+    width: 85vw;
+    border: 2px solid var(--darker-color);
+    background-color: white;
 }
 div.content {
     margin: 10px;
 }
-div.content > div {
+div.content > div:first-child {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     background-color: #a6c0d3;
@@ -81,4 +100,32 @@ div.content p {
     padding: 10px 0;
     font-size: 1.1em;
     text-indent: 48px;
+}
+div.content a {
+    text-decoration: none;
+    color: var(--anchor-color);
+}
+div.content a:hover {
+    background-color: var(--button-color);
+    color: var(--lighter-color);
+}
+/* div.title-only {
+    margin: 10px;
+}
+div.title-only > div:first-child {
+    display: inline-block;
+    background-color: #a6c0d3;
+    padding: 0 10px;
+} */
+div.no-title {
+    padding-top: 10px;
+}
+div.work {
+    margin-bottom: 10px;
+}
+div.work iframe,
+div.work p,
+div.work h2{
+    margin-left: 48px;
+    text-indent: 0;
 }
