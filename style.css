@@ -79,6 +79,7 @@ footer{
 }
 iframe {
     width: 85vw;
+    height: 500px;
     border: 2px solid var(--darker-color);
     background-color: white;
 }
@@ -90,7 +91,7 @@ div.content > div:first-child {
     grid-template-rows: repeat(2, 1fr);
     background-color: #a6c0d3;
     justify-content: center;
-    width: fit-content;
+    max-width: 223px;
     padding: 0 10px;
 }
 h1 + h2 {
@@ -124,8 +125,27 @@ div.work {
     margin-bottom: 10px;
 }
 div.work iframe,
-div.work p,
+div.work a,
 div.work h2{
     margin-left: 48px;
     text-indent: 0;
+}
+div.work a {
+    font-size: 1.1em;
+}
+div.achievement {
+    padding: 10px;
+}
+div.achievement h2 {
+    margin-top: 10px;
+}
+div.achievement img {
+    width: 92vw;
+}
+video {
+    max-width: 92vw;
+    margin: 10px;
+}
+ul {
+    list-style: none;
 }
